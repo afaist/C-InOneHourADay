@@ -1,4 +1,6 @@
-
+/*
+* Цветной вывод std::cout
+*/
 #include <iostream>
 
 const std::string reset("\033[0m");
