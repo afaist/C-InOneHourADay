@@ -1,6 +1,6 @@
 /*
-* Цветной вывод std::cout
-*/
+ * Цветной вывод std::cout
+ */
 #include <iostream>
 
 const std::string reset("\033[0m");
@@ -21,3 +21,12 @@ const std::string blue_bold("\033[1;34m");
 const std::string cyan_bold("\033[1;36m");
 const std::string magenta_bold("\033[1;35m");
 const std::string white_bold("\033[1;37m");
+
+const std::string black_italic("\033[3;30m");
+const std::string red_italic("\033[3;31m");
+const std::string green_italic("\033[3;32m");
+const std::string yellow_italic("\033[3;33m");
+const std::string blue_italic("\033[3;34m");
+const std::string cyan_italic("\033[3;36m");
+const std::string magenta_italic("\033[3;35m");
+const std::string white_italic("\033[3;37m");
