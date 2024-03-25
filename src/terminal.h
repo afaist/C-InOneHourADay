@@ -1,8 +1,9 @@
 /*
- * Цветной вывод std::cout
+ * Вывод в терминал
  */
 #include <iostream>
 
+// Цвет в терминале
 const std::string reset("\033[0m");
 const std::string black("\033[0;30m");
 const std::string red("\033[0;31m");
@@ -31,7 +32,6 @@ const std::string cyan_italic("\033[3;36m");
 const std::string magenta_italic("\033[3;35m");
 const std::string white_italic("\033[3;37m");
 
-
 const std::wstring w_reset(L"\033[0m");
 const std::wstring w_black(L"\033[0;30m");
 const std::wstring w_red(L"\033[0;31m");
@@ -59,3 +59,18 @@ const std::wstring w_blue_italic(L"\033[3;34m");
 const std::wstring w_cyan_italic(L"\033[3;36m");
 const std::wstring w_magenta_italic(L"\033[3;35m");
 const std::wstring w_white_italic(L"\033[3;37m");
+
+// Вывод содержимого контейнера
+template <typename T> void DisplayContainer(const T &container) {
+  std::cout << magenta;
+  std::cout << "Адрес контейнера: " << &container << std::endl;
+  std::cout << "Содержимое контейнера:" << std::endl;
+  if (container.empty()) {
+    std::cout << "Контейнер пуст";
+  } else {
+    for (auto element = container.cbegin(); element != container.cend();
+         ++element)
+      std::cout << *element << ' ';
+  }
+  std::cout << std::endl;
+}
