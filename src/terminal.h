@@ -72,5 +72,5 @@ template <typename T> void DisplayContainer(const T &container) {
          ++element)
       std::cout << *element << ' ';
   }
-  std::cout << std::endl;
+  std::cout << reset << std::endl;
 }
