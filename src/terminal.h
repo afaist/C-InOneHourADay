@@ -2,6 +2,7 @@
  * Вывод в терминал
  */
 #include <iostream>
+#include <ostream>
 
 // Цвет в терминале
 const std::string reset("\033[0m");
@@ -65,12 +66,15 @@ template <typename T> void DisplayContainer(const T &container) {
   std::cout << magenta;
   std::cout << "Адрес контейнера: " << &container << std::endl;
   std::cout << "Содержимое контейнера:" << std::endl;
+  int n = 0;
   if (container.empty()) {
     std::cout << "Контейнер пуст";
   } else {
     for (auto element = container.cbegin(); element != container.cend();
-         ++element)
-      std::cout << *element << ' ';
+         ++element) {
+      std::cout << ++n << " - ";
+      std::cout << *element << std::endl;
+    }
   }
   std::cout << reset << std::endl;
 }
