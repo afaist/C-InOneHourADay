@@ -25,6 +25,12 @@ int main(int argc, char *argv[]) {
   cout << "Добавляем элемент" << endl;
   msetInts1.insert(45);
   DisplayContainer(msetInts1);
-
+  cout << "Добавляем элементы первого множества" << endl;
+  msetInts1.insert(setInts1.begin(), setInts1.end());
+  msetInts1.insert(-1);
+  cout << "Добавляем еще -1" << endl;
+  DisplayContainer(msetInts1);
+  cout << "Количество экземпляров '-1' в мультимножестве: '";
+  cout << msetInts1.count(-1) << "'" << endl;
   return 0;
 }
