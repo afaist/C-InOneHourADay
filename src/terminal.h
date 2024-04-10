@@ -70,6 +70,7 @@ template <typename T> void DisplayContainer(const T &container) {
   if (container.empty()) {
     std::cout << "Контейнер пуст";
   } else {
+    std::cout << "Количество элементов = " << container.size() << std::endl;
     for (auto element = container.cbegin(); element != container.cend();
          ++element) {
       std::cout << ++n << " - ";
