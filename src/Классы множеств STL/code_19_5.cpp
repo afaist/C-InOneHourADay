@@ -1,4 +1,4 @@
-#include "terminal.h"
+#include "../terminal.h"
 #include <set>
 #include <string>
 using namespace std;
