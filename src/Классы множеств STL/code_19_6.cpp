@@ -1,4 +1,4 @@
-#include "terminal.h"
+#include "../terminal.h"
 #include <iterator>
 #include <sys/types.h>
 #include <unordered_set>
